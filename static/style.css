@@ -1,0 +1,371 @@
+body{
+    font-family: bahnschrift;
+    background-color: #0E402D;
+    /* cursor: url('/static/icons8-cursor-48.png'), animated ; */
+}
+
+
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2.5px solid #9FCC2E;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: changebrdrclr 2s infinite;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+  }
+  
+  .cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    color: white;
+    animation: changeclr 2s infinite;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
+  }
+  
+  .content:hover ~ .cursor{
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #c6c6c6;
+    opacity: .5;
+  }
+  
+  .content:hover ~ .cursor2{
+    opacity: 0;
+  }
+
+  /* @keyframes changeclr{
+    0%{background-color: red;}
+    50%{background-color: blue;}
+    100%{background-color:yellow;}
+  }
+  @keyframes changebrdrclr{
+    0%{border: 2.5px solid yellow;}
+    50%{border: 2.5px solid blue;}
+    100%{border:2.5px solid red;}
+  } */
+
+::selection{
+    background-color: #5A6650;
+    color: white;
+}
+
+.body{
+    text-align: center;
+    width: 50%;
+    position: relative;
+    top: 200px;
+    margin: auto;
+}
+
+.header{
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.navbar a{
+    float: right;
+    width: 10%;
+    margin: 5px;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    font-size: medium;
+    text-align: center;
+    border: 2px solid white;
+    transition: 0.5s;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+.navbar a:hover{
+    transition: 0.5s;
+    border-bottom:2px solid #9FCC2E;
+    color: white;
+}
+
+
+
+.imgbgimg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+.intro{
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.introname{
+    font-size: 40px; 
+    font-weight: bolder;
+    text-shadow: 6px 7px 2px #9FCC2E, -5px -6px 1px #98BC3D;
+}
+
+a{
+    color: white;
+    text-decoration:none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
+    width: 20%;
+    font-size: 20px;
+    transition: 0.5s;
+    position: relative;
+    top: 20px;
+}
+
+.button:hover{
+    background-color: white;
+    transition: 1s ease;
+}
+
+.button:hover > span{
+    transition: 0.5s;
+    display: inline-block;
+    width: auto;
+    font-size: 20px;
+    color: #5A6650;
+    transition: 1s ease;
+}
+
+.button:hover > i{
+    color: #5A6650;
+    transition: 1s ease;
+}
+
+menu{
+    position: relative;
+    top: 75px;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+
+span{
+    font-size: 0px;
+    width: 0px;
+    transition: 1s ease;
+}
+
+.about{
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    top: 100px;
+    border-bottom: 5px solid #5A6650;
+
+}
+
+.about p{
+    word-wrap: break-word;
+}
+
+.aboutimg{
+    width: 15%;
+    border-radius: 50%;
+    border: 2px solid#295135;
+}
+
+.aboutspan{
+    color: #295135;
+}
+
+.contact{
+    position: relative;
+    top: 100px;
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 20px;
+
+}
+
+
+.contactform{
+    text-align: center;
+    /* border: 2px solid #7D1128; */
+    padding: 10px;
+}
+
+.contactbody{
+    background-image: url('/static/Images Wallpaper.jfif');
+    background-repeat: no-repeat;
+}
+
+form{
+    text-align: center;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+}
+
+.contact h2{
+    width: 50%;
+    margin-left: auto;
+
+}
+
+input{
+    width: 75%;
+    padding: 5px;
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+input::placeholder{
+    color: white;
+}
+
+input[type=submit]{
+    background-color: #295135;
+    border: none;
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+}
+
+.contacticons:hover{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(355deg) brightness(104%) contrast(100%);
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.contactformbutton svg{
+    width: 25px;
+}
+
+.contactformbutton{
+    width:75%;
+    margin: auto;
+}
+
+.socialmediabox{
+    width: 50%;
+    margin-left: auto;
+}
+
+.socialmediabox a{
+    display: inline-flex;
+    text-align: center;
+    position: relative;
+    top: 0;
+    width: auto;
+}
+
+.projectscontainer{
+    width: 75%;
+    color: white;
+    margin: auto;
+    position: relative;
+    display: flex;
+    transition: 0.5s ease;
+    /* top: 125px; */
+}
+
+.projectslist ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.projectscontainer ul li{
+    padding: 10px;
+    margin: 15px;
+    list-style-type: none;
+}
+
+.projectscontainer a{
+    padding: 0;
+    margin: 0;
+    border: 2px solid transparent;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #295135;
+}
+
+.projectslist .active{
+    background-color: #0E402D;
+}
+
+.projectscontainer button:hover{
+    background-color: #9FCC2E;
+}
+
+.projectcontent{
+    background-color: white;
+    color: black;
+    width: 75%;
+    z-index: -1;
+    padding: 15px;
+    position: relative;
+}
+
+.projectslist button:focus{
+    background-color: #0E402D;
+}
+
+button{
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    border: 2px solid transparent;
+    background-color: #295135;
+    color: white;
+    cursor: pointer;
+}
+
+#projectcontentbody{
+    text-align: center;
+    margin: auto;
+    transition: 0.5s ease;
+}
+
+.mailsentmsg{
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+.mailsentmsg p{
+    color: white;
+    margin:auto;
+    background-color: rgb(255, 44, 85, 0.5);
+    padding: 10px;
+}
