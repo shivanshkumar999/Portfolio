@@ -2,6 +2,7 @@ body{
     font-family: bahnschrift;
     background-color: #0E402D;
     /* cursor: url('/static/icons8-cursor-48.png'), animated ; */
+    cursor: none;
 }
 
 
@@ -366,6 +367,6 @@ button{
 .mailsentmsg p{
     color: white;
     margin:auto;
-    background-color: rgb(255, 44, 85, 0.5);
+    background-color: #9FCC2E;
     padding: 10px;
 }
