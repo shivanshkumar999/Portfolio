@@ -77,7 +77,6 @@ body, input, button, a, div{
     text-align: center;
     width: 50%;
     position: relative;
-    top: 200px;
     margin: auto;
 }
 
@@ -125,6 +124,110 @@ body, input, button, a, div{
     opacity: 0.25;
 }
 
+.hrdiv{
+    /* width: 100%; */
+    color: white;
+    display:flex;
+    /* flex-direction:row; */
+    align-items: center;
+}
+
+.hrdiv #hrp1{
+    position: relative;
+    animation: hrp1 2s infinite ease;
+}
+.hrdiv #hrp2{
+    position: relative;
+    animation: hrp2 2s infinite ease;
+}
+.hrdiv #hrp3{
+    position: relative;
+    animation: hrp3 2s infinite ease;
+}
+
+@keyframes hrp1 {
+    0%{transform: rotate(180deg);
+    /* left: -5%; */
+}
+    50%{transform: rotate(360deg);
+    /* left: -0.5%; */
+}
+    100%{transform: rotate(720deg);
+    /* left: -5%; */
+}
+}
+
+
+@keyframes hrp2 {
+    0%{transform: rotate(180deg);
+    /* left: -4%; */
+}
+    50%{transform: rotate(360deg);
+    /* left: -1.5%; */
+}
+    100%{transform: rotate(720deg);
+    /* left: -4%; */
+}
+}
+
+
+@keyframes hrp3 {
+    0%{transform: rotate(180deg);
+    /* left: -4.5%; */
+}
+    50%{transform: rotate(360deg);
+    /* left: -2.5%; */
+}
+    100%{transform: rotate(720deg);
+    /* left: -4.5%; */
+}
+}
+
+#hr1,#hr2,#hr3{
+    max-width: 800px;
+    margin-left: 0;
+}
+
+#hr1,#hr2,#hr3{
+    max-width: 800px;
+    margin-right: 0;
+}
+
+
+#hr1{
+    border:5px solid #9FCC2E;
+    width: 50%;
+    animation: hr1ani 2s infinite ease;
+}
+#hr2{
+    border:5px solid white;
+    width: 10%;
+    animation: hr2ani 2.5s infinite ease;
+}
+#hr3{
+    border:5px solid #98BC3D;
+    width: 30%;
+    animation: hr3ani 1.5s infinite ease;
+}
+
+@keyframes hr1ani {
+    0%{width: 30%;}
+    50%{width: 50%;}
+    100%{width: 30%;}
+}
+
+@keyframes hr2ani {
+    0%{width: 50%;}
+    50%{width: 10%;}
+    100%{width: 50%;}
+}
+
+@keyframes hr3ani {
+    0%{width: 10%;}
+    50%{width: 50%;}
+    100%{width: 10%;}
+}
+
 .intro{
     color: white;
     text-align: center;
@@ -146,10 +249,40 @@ body, input, button, a, div{
   
 }
 
+.intro h3{
+    display: inline-block;
+    visibility: hidden;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #9FCC2E; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    /* letter-spacing: .15em; Adjust as needed */
+    animation:     typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    animation-delay: 2s;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%; visibility: visible; }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; visibility: visible; }
+    50% { border-color: transparent; visibility: visible; }
+  }
+
 .introname{
     font-size: 40px; 
     font-weight: bolder;
     text-shadow: 6px 7px 2px #9FCC2E, -5px -6px 1px #98BC3D;
+    
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #9FCC2E; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    
+    animation:     typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 
 a{
