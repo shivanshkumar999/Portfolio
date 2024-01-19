@@ -276,13 +276,6 @@ body, input, button, a, div{
     font-size: 40px; 
     font-weight: bolder;
     text-shadow: 6px 7px 2px #9FCC2E, -5px -6px 1px #98BC3D;
-    
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #9FCC2E; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    
-    animation:     typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 
 a{
