@@ -4,9 +4,25 @@ body{
     /* cursor: url('/static/icons8-cursor-48.png'), animated ; */
 }
 
-body, input, button, a, div{
+html,body, input, button, a, div{
     cursor: none;
 }
+
+video{
+    z-index: -1;
+    position: fixed;
+    filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    video{
+        display: none;
+    }
+  }
 
 .intro{
     padding: 5px;
@@ -198,17 +214,17 @@ body, input, button, a, div{
 #hr1{
     border:5px solid #9FCC2E;
     width: 50%;
-    animation: hr1ani 2s infinite ease;
+    animation: hr1ani 3s infinite ease;
 }
 #hr2{
     border:5px solid white;
     width: 10%;
-    animation: hr2ani 2.5s infinite ease;
+    animation: hr2ani 3.5s infinite ease;
 }
 #hr3{
     border:5px solid #98BC3D;
     width: 30%;
-    animation: hr3ani 1.5s infinite ease;
+    animation: hr3ani 2.5s infinite ease;
 }
 
 @keyframes hr1ani {
